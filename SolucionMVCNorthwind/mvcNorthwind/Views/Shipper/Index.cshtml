@@ -1,0 +1,31 @@
+﻿@model IEnumerable<mvcNorthwind.Models.Shipper>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Compañías de envío</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+    </tr>
+}
+
+</table>
